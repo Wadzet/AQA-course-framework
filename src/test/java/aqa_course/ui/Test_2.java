@@ -1,4 +1,4 @@
-package aqa_course.api;
+package aqa_course.ui;
 
 import org.testng.annotations.Test;
 
