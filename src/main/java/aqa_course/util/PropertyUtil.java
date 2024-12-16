@@ -5,17 +5,19 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertyUtil {
-    private static Properties property = null;
+    private static Properties properties;
+
+    static {
+        properties = new Properties();
+        try (FileInputStream fis = new FileInputStream("src/main/resources/config.properties")) {
+            properties.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to load properties file.");
+        }
+    }
 
     public static String getProperty(String key) {
-        if (property == null) {
-            property = new Properties();
-            try {
-                property.load(new FileInputStream("src/main/resources/config.properties"));
-            } catch (IOException e) {
-                throw new RuntimeException("Failed to load config.properties", e);
-            }
-        }
-        return property.getProperty(key);
+        return properties.getProperty(key);
     }
 }
