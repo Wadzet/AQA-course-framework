@@ -1,0 +1,1 @@
+{"uuid":"279755e7-8a3d-43ba-bc0f-b2a169e8bf0f","name":"aqa_course.ui.CreateUserTest","children":["c48611ac-be63-44f3-a121-5053b3de4fe7"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1734417309319,"stop":1734417310342}],"afters":[],"start":1734417309306,"stop":1734417311327}
