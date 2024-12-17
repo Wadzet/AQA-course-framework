@@ -23,8 +23,8 @@ public class LoginTest {
         loginBO.performLogin("administrator", "root");
     }
 
-//    @AfterClass
-//    public void tearDown() {
-//        DriverPool.quitDriver();
-//    }
+    @AfterClass
+    public void tearDown() {
+        DriverPool.quitDriver();
+    }
 }
